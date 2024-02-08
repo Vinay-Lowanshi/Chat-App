@@ -1,4 +1,5 @@
 
+
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
@@ -20,8 +21,9 @@ document.getElementById('signupForm').addEventListener('submit', async (event) =
             password
         });
         
-        alert("Account created successfully! Please log in to access your account.");
-        
+        alert(` ${response.data.message}`);
+        // document.getElementById('signupForm').reset()
+        window.location.href = 'user/login';
     } 
     
     catch (error) {

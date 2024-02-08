@@ -4,6 +4,7 @@ const sequelize=require('./connect')
 const app = express();
 const port = 3000;
 app.use(express.static('public', { extensions: ['html'] }))
+const bcrypt=require('bcrypt')
 
 const userRoute=require('./routers/userRoute');
 app.use(express.json()); // for parsing application/json
